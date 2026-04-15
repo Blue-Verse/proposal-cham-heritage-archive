@@ -366,15 +366,17 @@
               <blockquote>기능별 개발 공수(Man-Day)를 산출하여 일정과 비용의 근거를 제시합니다.</blockquote>
 
               <h2>공수 요약</h2>
+              <p>첨부 명세서 기반 — 13+ 데이터 모델, 40+ API 엔드포인트, ERC-721/ERC-1155 스마트 컨트랙트 범위 반영</p>
               <table>
                 <tr><th>구분</th><th>공수 (M/D)</th><th>비율</th></tr>
-                <tr><td>기획/설계</td><td>15 M/D</td><td>12%</td></tr>
-                <tr><td>디자인 (Figma)</td><td>18 M/D</td><td>14%</td></tr>
-                <tr><td>프론트엔드</td><td>30 M/D</td><td>24%</td></tr>
-                <tr><td>백엔드</td><td>40 M/D</td><td>32%</td></tr>
-                <tr><td>QA/배포</td><td>10 M/D</td><td>8%</td></tr>
+                <tr><td>기획/설계</td><td>13 M/D</td><td>10%</td></tr>
+                <tr><td>디자인 (Figma)</td><td>17 M/D</td><td>13%</td></tr>
+                <tr><td>프론트엔드</td><td>28 M/D</td><td>22%</td></tr>
+                <tr><td>백엔드 API + 외부 연동</td><td>35 M/D</td><td>28%</td></tr>
+                <tr><td>NFT/블록체인</td><td>15 M/D</td><td>12%</td></tr>
+                <tr><td>QA/배포</td><td>7 M/D</td><td>5%</td></tr>
                 <tr><td>PM/커뮤니케이션</td><td>13 M/D</td><td>10%</td></tr>
-                <tr><th>합계</th><th>126 M/D</th><th>100%</th></tr>
+                <tr><th>합계</th><th>128 M/D</th><th>100%</th></tr>
               </table>
 
               <h2>기능별 상세 공수</h2>
@@ -383,32 +385,37 @@
                   <tr><th>기능</th><th>세부 작업</th><th>담당</th><th>공수 (M/D)</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td rowspan="3">기획/설계</td><td>요구사항 상세 분석 및 정보 구조</td><td>기획</td><td>5</td></tr>
-                  <tr><td>DB 스키마 설계 (Prisma)</td><td>설계</td><td>5</td></tr>
-                  <tr><td>API 명세서 작성</td><td>설계</td><td>5</td></tr>
-                  <tr><td>디자인</td><td>Figma UI/UX 디자인 (카탈로그, 결제, 구독, NFT, 관리자)</td><td>디자인</td><td>18</td></tr>
-                  <tr><td rowspan="3">콘텐츠 카탈로그</td><td>카탈로그 목록/상세/검색 화면</td><td>FE</td><td>5</td></tr>
-                  <tr><td>검색/필터링/정렬 API</td><td>BE</td><td>4</td></tr>
-                  <tr><td>파일 업로드/미리보기/S3 연동</td><td>BE</td><td>4</td></tr>
-                  <tr><td rowspan="2">사용자 인증</td><td>회원가입/로그인 화면 + API</td><td>풀스택</td><td>4</td></tr>
-                  <tr><td>역할 기반 접근 제어 (B2C/B2B/관리자)</td><td>BE</td><td>3</td></tr>
-                  <tr><td rowspan="3">B2C 구매</td><td>장바구니/결제 화면</td><td>FE</td><td>4</td></tr>
-                  <tr><td>Stripe 단건 결제 API</td><td>BE</td><td>4</td></tr>
-                  <tr><td>라이선스 발급 및 워터마크 적용 다운로드</td><td>BE</td><td>4</td></tr>
-                  <tr><td rowspan="3">B2B 구독</td><td>기관 구독 관리 화면</td><td>FE</td><td>4</td></tr>
-                  <tr><td>Stripe 인보이스 구독 API</td><td>BE</td><td>5</td></tr>
-                  <tr><td>구독 라이선스 배치 관리</td><td>BE</td><td>3</td></tr>
-                  <tr><td rowspan="3">NFT 라이선스</td><td>NFT 민팅/조회 화면</td><td>FE</td><td>3</td></tr>
-                  <tr><td>Polygon 스마트 컨트랙트 (ERC-721)</td><td>BE/Web3</td><td>6</td></tr>
-                  <tr><td>IPFS 메타데이터 (web3.storage)</td><td>BE</td><td>3</td></tr>
-                  <tr><td rowspan="2">워터마크/DRM</td><td>IMATAG 포렌식 워터마크 연동</td><td>BE</td><td>4</td></tr>
-                  <tr><td>Pallycon DRM 스트리밍 연동</td><td>BE</td><td>5</td></tr>
-                  <tr><td rowspan="3">관리자 패널</td><td>콘텐츠/사용자/구독 관리 화면</td><td>FE</td><td>6</td></tr>
-                  <tr><td>대시보드 통계/매출 차트</td><td>FE</td><td>4</td></tr>
-                  <tr><td>관리자 API</td><td>BE</td><td>5</td></tr>
-                  <tr><td rowspan="2">QA/배포</td><td>통합 테스트 및 검수</td><td>QA</td><td>6</td></tr>
-                  <tr><td>Docker + Nginx 배포, 문서화</td><td>DevOps</td><td>4</td></tr>
-                  <tr><td>PM</td><td>프로젝트 관리, 미팅, 커뮤니케이션</td><td>PM</td><td>13</td></tr>
+                  <tr><td rowspan="3">기획/설계</td><td>명세서 기반 정보 구조 확정</td><td>기획</td><td>4</td></tr>
+                  <tr><td>Prisma 스키마 (13+ 모델: Asset, AssetFile, User, Organization, LicenseType, Order, License, Subscription, DownloadLog, NftContract, NftLicense, NftTransferRequest)</td><td>설계</td><td>5</td></tr>
+                  <tr><td>API 명세서 (40+ 엔드포인트)</td><td>설계</td><td>4</td></tr>
+                  <tr><td>디자인</td><td>Figma UI/UX — 카탈로그, 에셋 상세, 결제, 기관 대시보드, 관리자 패널, NFT 라이선스, i18n (한/영)</td><td>디자인</td><td>17</td></tr>
+                  <tr><td rowspan="3">콘텐츠 카탈로그</td><td>그리드 카탈로그, 필터(장르/유형/연도), 한영 풀텍스트 검색, 에셋 상세 페이지</td><td>FE</td><td>6</td></tr>
+                  <tr><td>카탈로그 API (GET /api/assets, /assets/:slug), 댄스 카테고리 API</td><td>BE</td><td>4</td></tr>
+                  <tr><td>S3 파일 관리 + Sharp 가시 워터마크 생성 (thumb/low/high/master)</td><td>BE</td><td>4</td></tr>
+                  <tr><td rowspan="2">인증/권한</td><td>NextAuth.js (이메일+OAuth), 로그인/회원가입/기관등록 화면</td><td>풀스택</td><td>4</td></tr>
+                  <tr><td>RBAC 5역할 (CONSUMER, INSTITUTIONAL_USER/ADMIN, STAFF, ADMIN), 2FA(Staff)</td><td>BE</td><td>3</td></tr>
+                  <tr><td rowspan="4">B2C 구매</td><td>장바구니 + Stripe Elements 결제 화면</td><td>FE</td><td>4</td></tr>
+                  <tr><td>Stripe PaymentIntent API + 웹훅</td><td>BE</td><td>4</td></tr>
+                  <tr><td>License 발급 + 토큰 기반 다운로드 (GET /api/download/:token)</td><td>BE</td><td>3</td></tr>
+                  <tr><td>구매 확인 이메일 + PDF 라이선스 계약서 (Resend/Postmark)</td><td>BE</td><td>2</td></tr>
+                  <tr><td rowspan="3">B2B 기관</td><td>기관 대시보드 (사용량, 다운로드 이력, 팀 관리, 인보이스)</td><td>FE</td><td>5</td></tr>
+                  <tr><td>Stripe 인보이스 구독 API + 사용량 제한 (images_per_period/clips_per_period)</td><td>BE</td><td>5</td></tr>
+                  <tr><td>기관 등록 승인 워크플로우 + 커스텀 라이선스 문의 (DocuSign)</td><td>BE</td><td>3</td></tr>
+                  <tr><td rowspan="2">워터마크/DRM</td><td>IMATAG API — 에셋 등록, 다운로드별 워터마크, 침해 웹훅 처리</td><td>BE</td><td>5</td></tr>
+                  <tr><td>Pallycon DRM — HLS 비디오 프리뷰 스트리밍 (480p/30초), 플레이어 SDK</td><td>BE</td><td>4</td></tr>
+                  <tr><td rowspan="4">NFT 라이선스</td><td>Solidity 컨트랙트 — ChamHeritageLicense (ERC-721) + ChamHeritageTimedLicense (ERC-1155), Hardhat 테스트/배포</td><td>Web3</td><td>6</td></tr>
+                  <tr><td>Bull + Redis 민팅 큐 (nft:mint, nft:burn), ethers.js v6 연동</td><td>BE</td><td>4</td></tr>
+                  <tr><td>IPFS 메타데이터 (web3.storage/Pinata) + Alchemy 웹훅 이벤트 리스너</td><td>BE</td><td>3</td></tr>
+                  <tr><td>NFT 라이선스 조회, 지갑 클레임 (영구 라이선스만), 공개 검증 엔드포인트</td><td>풀스택</td><td>2</td></tr>
+                  <tr><td rowspan="3">관리자 패널</td><td>에셋 관리 (업로드/메타데이터/Tier/발행), 주문/라이선스 관리, 기관 관리</td><td>FE</td><td>6</td></tr>
+                  <tr><td>NFT 관리 (컨트랙트 배포, 민팅 대시보드, 수동 burn/re-mint, 전송 요청 큐)</td><td>FE</td><td>3</td></tr>
+                  <tr><td>침해 알림 뷰 (IMATAG breach → DownloadLog 추적), 분석 대시보드 (매출/전환/사용량)</td><td>풀스택</td><td>4</td></tr>
+                  <tr><td rowspan="2">콘텐츠 인제스트</td><td>이미지 인제스트 스크립트 (1,032장, Sharp 프리뷰 생성, CSV 리포트)</td><td>BE</td><td>3</td></tr>
+                  <tr><td>DVD 비디오 추출 (FFmpeg VOB→MP4), HLS 트랜스코딩</td><td>BE</td><td>1</td></tr>
+                  <tr><td>i18n</td><td>next-intl 한국어/영어 전체 적용 (UI, 이메일, 에셋 메타데이터)</td><td>FE</td><td>4</td></tr>
+                  <tr><td rowspan="2">QA/배포</td><td>통합 테스트, 스마트 컨트랙트 테스트 (Hardhat)</td><td>QA</td><td>4</td></tr>
+                  <tr><td>Docker + Nginx 배포, 문서화</td><td>DevOps</td><td>3</td></tr>
+                  <tr><td>PM</td><td>프로젝트 관리, 주간 미팅, 커뮤니케이션</td><td>PM</td><td>13</td></tr>
                 </tbody>
               </table>
 
@@ -546,15 +553,16 @@
               <blockquote>총 180일 (6개월) 기준 단계별 마일스톤 및 산출물을 제안합니다.</blockquote>
 
               <h2>전체 일정 요약</h2>
+              <p>명세서 Section 13 개발 단계에 맞춰 Phase 1(Core Portal) + Phase 2(B2B+NFT)를 180일 내 완료합니다.</p>
               <table>
                 <thead>
                   <tr><th>단계</th><th>기간</th><th>주요 산출물</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Phase 1: 기획 및 설계</td><td>Day 1–30 (30일)</td><td>요구사항 정의서, Figma 디자인, DB 스키마, API 명세서</td></tr>
-                  <tr><td>Phase 2: 코어 개발</td><td>Day 31–95 (65일)</td><td>카탈로그, 인증, B2C 구매, S3 파일 관리, Stripe 결제</td></tr>
-                  <tr><td>Phase 3: 고급 기능 개발</td><td>Day 96–150 (55일)</td><td>B2B 구독, NFT 민팅, IMATAG/Pallycon 연동, IPFS</td></tr>
-                  <tr><td>Phase 4: 관리자 + QA + 배포</td><td>Day 151–180 (30일)</td><td>관리자 패널, 통합 테스트, Docker 배포, 문서화</td></tr>
+                  <tr><td>Phase 0: 설계</td><td>Day 1–25 (25일)</td><td>Figma 디자인, Prisma 스키마 (13+ 모델), API 명세서 (40+ 엔드포인트)</td></tr>
+                  <tr><td>Phase 1: Core Portal (명세서 Phase 1)</td><td>Day 26–85 (60일)</td><td>카탈로그, NextAuth 인증, B2C Stripe 결제, IMATAG 워터마크, Pallycon DRM, 콘텐츠 인제스트 (1,032 이미지 + DVD), i18n</td></tr>
+                  <tr><td>Phase 2: B2B + NFT (명세서 Phase 2)</td><td>Day 86–155 (70일)</td><td>기관 구독, 기관 대시보드, NFT 민팅 (ERC-721/ERC-1155, Hardhat), IPFS, Bull 큐, Alchemy 웹훅, 침해 알림, DocuSign</td></tr>
+                  <tr><td>Phase 3: 관리자 + QA + 배포</td><td>Day 156–180 (25일)</td><td>관리자 패널 (에셋/NFT/침해/분석), 스마트 컨트랙트 테스트, 통합 테스트, Docker 배포</td></tr>
                 </tbody>
               </table>
             </article>
@@ -564,43 +572,43 @@
             <h2 class="mb-4 text-sm font-semibold tracking-[0.14em] text-slate-500">상세 타임라인</h2>
             <div class="timeline">
               <div class="timeline-item">
-                <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 1</p>
-                <h4 class="text-base font-semibold text-slate-900">기획 및 설계</h4>
-                <p class="mb-1 text-sm font-semibold text-amber-600">Day 1–30 (30일)</p>
-                <p class="text-sm leading-7 text-slate-600">클라이언트 미팅을 통한 요구사항 상세 확인, 첨부 PDF 명세서 기반 정보 구조 설계, Figma UI/UX 디자인, Prisma DB 스키마 설계, API 명세서 작성</p>
+                <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 0</p>
+                <h4 class="text-base font-semibold text-slate-900">설계</h4>
+                <p class="mb-1 text-sm font-semibold text-amber-600">Day 1–25 (25일)</p>
+                <p class="text-sm leading-7 text-slate-600">첨부 명세서(Section 3~5) 기반 Prisma 스키마 구현 (Asset, AssetFile, User, Organization, LicenseType, Order, License, Subscription, DownloadLog, NftContract, NftLicense, NftTransferRequest 등 13+ 모델), Figma UI/UX 디자인, 40+ API 엔드포인트 명세서 확정</p>
                 <ul class="mt-2 list-disc pl-5 text-sm text-slate-500">
-                  <li>산출물: 요구사항 정의서, Figma 디자인 시안, ERD, API 명세서</li>
-                  <li>마일스톤 검수: 디자인 시안 승인, DB 스키마 확정</li>
+                  <li>산출물: Figma 시안, Prisma 마이그레이션, API 명세서</li>
+                  <li>마일스톤 검수: 디자인 승인, 스키마 확정</li>
                 </ul>
               </div>
               <div class="timeline-item">
-                <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 2</p>
-                <h4 class="text-base font-semibold text-slate-900">코어 개발</h4>
-                <p class="mb-1 text-sm font-semibold text-amber-600">Day 31–95 (65일)</p>
-                <p class="text-sm leading-7 text-slate-600">콘텐츠 카탈로그(검색/필터/상세), 사용자 인증(RBAC), B2C 단건 구매(Stripe), S3 파일 저장소, 기본 화면 퍼블리싱</p>
+                <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 1 — Core Portal</p>
+                <h4 class="text-base font-semibold text-slate-900">B2C 셀프서브 + 콘텐츠 인제스트</h4>
+                <p class="mb-1 text-sm font-semibold text-amber-600">Day 26–85 (60일)</p>
+                <p class="text-sm leading-7 text-slate-600">명세서 Phase 1 범위: 콘텐츠 인제스트 스크립트(1,032 이미지 + DVD FFmpeg 추출), 카탈로그(그리드/필터/검색/상세), NextAuth.js 인증(RBAC 5역할), B2C Stripe 결제(Personal/Editorial/Commercial), IMATAG 포렌식 워터마크, Pallycon DRM 비디오 프리뷰(HLS 480p/30초), 토큰 기반 다운로드, 구매 이메일 + PDF 라이선스, next-intl 한영 i18n, Docker 배포</p>
                 <ul class="mt-2 list-disc pl-5 text-sm text-slate-500">
-                  <li>산출물: 카탈로그 기능, 결제 시스템, 사용자 인증</li>
-                  <li>마일스톤 검수: B2C 구매 플로우 E2E 시연</li>
+                  <li>산출물: B2C 셀프서브 구매 전체 플로우, 1,032 이미지 인제스트 완료</li>
+                  <li>마일스톤 검수: 카탈로그 → 결제 → 워터마크 다운로드 E2E 시연</li>
+                </ul>
+              </div>
+              <div class="timeline-item">
+                <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 2 — B2B + NFT</p>
+                <h4 class="text-base font-semibold text-slate-900">기관 구독 + 온체인 라이선스</h4>
+                <p class="mb-1 text-sm font-semibold text-amber-600">Day 86–155 (70일)</p>
+                <p class="text-sm leading-7 text-slate-600">명세서 Phase 2 범위: 기관 등록/승인 워크플로우, 구독 대시보드(사용량/팀관리/인보이스), Stripe 인보이스 구독, 커스텀 라이선스 문의(DocuSign), IMATAG 침해 알림 뷰, ChamHeritageLicense(ERC-721) Polygon Amoy 배포, Bull+Redis NFT 민팅 큐, IPFS 메타데이터(web3.storage), Alchemy 웹훅, 공개 검증 엔드포인트, 가스 잔액 알림</p>
+                <ul class="mt-2 list-disc pl-5 text-sm text-slate-500">
+                  <li>산출물: 기관 구독 시스템, NFT 민팅 파이프라인, 침해 추적</li>
+                  <li>마일스톤 검수: B2B 구독 → 다운로드 + NFT 민팅 → 온체인 검증 E2E 시연</li>
                 </ul>
               </div>
               <div class="timeline-item">
                 <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 3</p>
-                <h4 class="text-base font-semibold text-slate-900">고급 기능 개발</h4>
-                <p class="mb-1 text-sm font-semibold text-amber-600">Day 96–150 (55일)</p>
-                <p class="text-sm leading-7 text-slate-600">B2B 기관 구독(Stripe 인보이스), NFT 라이선스 증명(Polygon + IPFS), 포렌식 워터마크(IMATAG), DRM 스트리밍(Pallycon)</p>
-                <ul class="mt-2 list-disc pl-5 text-sm text-slate-500">
-                  <li>산출물: 구독 시스템, NFT 민팅, 워터마크/DRM 연동</li>
-                  <li>마일스톤 검수: NFT 라이선스 발급 시연, 워터마크 적용 확인</li>
-                </ul>
-              </div>
-              <div class="timeline-item">
-                <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 4</p>
                 <h4 class="text-base font-semibold text-slate-900">관리자 패널 + QA + 배포</h4>
-                <p class="mb-1 text-sm font-semibold text-amber-600">Day 151–180 (30일)</p>
-                <p class="text-sm leading-7 text-slate-600">관리자 대시보드, 통합 테스트, 크로스 브라우저 테스트, Docker + Nginx 배포, API 문서·배포 가이드 작성</p>
+                <p class="mb-1 text-sm font-semibold text-amber-600">Day 156–180 (25일)</p>
+                <p class="text-sm leading-7 text-slate-600">관리자 패널(에셋 업로드/메타데이터/Tier/발행, 주문/라이선스 관리, 기관 승인, NFT 컨트랙트 관리/수동 burn·re-mint, 전송 요청 큐, 침해 알림→DownloadLog 추적, 분석 대시보드), Hardhat 스마트 컨트랙트 테스트, 통합 테스트, Docker+Nginx 프로덕션 배포</p>
                 <ul class="mt-2 list-disc pl-5 text-sm text-slate-500">
-                  <li>산출물: 관리자 패널, 테스트 결과서, 배포 완료, 개발 문서</li>
-                  <li>마일스톤 검수: 전체 기능 통합 시연, 최종 인수</li>
+                  <li>산출물: 관리자 패널, 테스트 결과서, 프로덕션 배포, 개발 문서</li>
+                  <li>마일스톤 검수: 전체 시스템 통합 시연, 최종 인수</li>
                 </ul>
               </div>
             </div>
@@ -614,10 +622,10 @@
                   <tr><th>마일스톤</th><th>시점</th><th>검수 기준</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>M1: 설계 완료</td><td>Day 30</td><td>Figma 디자인 승인, DB 스키마 확정, API 명세서 확정</td></tr>
-                  <tr><td>M2: 코어 기능 완료</td><td>Day 95</td><td>카탈로그 + B2C 구매 + Stripe 결제 E2E 시연</td></tr>
-                  <tr><td>M3: 고급 기능 완료</td><td>Day 150</td><td>B2B 구독 + NFT + 워터마크 + DRM 통합 시연</td></tr>
-                  <tr><td>M4: 최종 인수</td><td>Day 180</td><td>관리자 패널 + 전체 시스템 통합 테스트 + 배포 완료</td></tr>
+                  <tr><td>M0: 설계 완료</td><td>Day 25</td><td>Figma 승인, Prisma 스키마 (13+ 모델) 확정, API 명세서 확정</td></tr>
+                  <tr><td>M1: Core Portal</td><td>Day 85</td><td>카탈로그 + B2C Stripe 결제 + IMATAG 워터마크 + Pallycon DRM + 1,032 이미지 인제스트 E2E 시연</td></tr>
+                  <tr><td>M2: B2B + NFT</td><td>Day 155</td><td>기관 구독 + NFT 민팅(ERC-721) + IPFS + 온체인 검증 + 침해 알림 통합 시연</td></tr>
+                  <tr><td>M3: 최종 인수</td><td>Day 180</td><td>관리자 패널 + 스마트 컨트랙트 테스트 + 전체 통합 테스트 + Docker 배포</td></tr>
                 </tbody>
               </table>
 
